@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Insert title here</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/css.css" rel="stylesheet" />
+<link href="css/select.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/wenjuan_ht.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.idTabs.min.js"></script>
+<script type="text/javascript" src="js/select-ui.min.js"></script>
+<script type="text/javascript" src="js/kindeditor.js"></script>
+<script src="js/jquery-1.8.0.min.js"></script>
+<script src="js/question.js"></script>
+<script type="text/javascript">
+	KE.show({
+		id : 'content7',
+		cssPath : './index.css'
+	});
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function(e) {
+		$(".select1").uedSelect({
+			width : 345
+		});
+		$(".select2").uedSelect({
+			width : 167
+		});
+		$(".select3").uedSelect({
+			width : 100
+		});
+	});
+	var flag = 0;
+	function displayNone() {
+		var span = document.getElementById("hint");
+		span.style.display = "none";
+		setTimeout("displayNone()", 5000);
+	}
+	window.onload = function() {
+		if (flag == 0) {
+			displayNone();
+		}
+	}
+</script>
+</head>
+<body>
+	<div class=" all_660">
+		<% String message = (String)session.getAttribute("postMessage");
+		if(message!=null){ %> <%= message %><br /> <%
+		session.removeAttribute("postMessage"); } %>
+		<div class="xxk_box">
+			<ul class="xxk_title">
+				<li class="on">定义问卷</li>
+			</ul>
+			<div class="xxk_conn">
+				<form action="<%= request.getContextPath() %>/PostReportServlet"
+					method="post">
+					<div class="xxk_xzqh_box tktm">
+						<div id="usual1" class="usual">
+							<div id="tab1" class="tabson">
+								<ul class="forminfo">
+									<li><label>信息标题<b>*</b></label><input name="Message_Title"
+										type="text" class="dfinput"
+										value="<%= messageInfo.getMessage_title() %>"
+										style="width: 518px;" disabled="disabled" /></li>
+									<li><label>活动内容<b>*</b></label> <textarea
+											name="Message_Context" class="textinput" disabled="disabled"><%= messageInfo.getMessage_Context() %></textarea>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

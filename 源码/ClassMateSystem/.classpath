@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="lib" path="F:/eclipse/ClassMateSystem/WebContent/WEB-INF/lib/jstl.jar"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry exported="true" kind="lib" path="E:/app/Administrator/product/11.2.0/dbhome_1/jdbc/lib/ojdbc6.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/eclipse/Apache/apache-tomcat-8.0.41/lib/servlet-api.jar"/>
+	<classpathentry exported="true" kind="lib" path="F:/eclipse/ClassMateSystem/WebContent/WEB-INF/lib/standard.jar"/>
+	<classpathentry exported="true" kind="lib" path="F:/eclipse/ClassMateSystem/WebContent/WEB-INF/lib/sun.misc.BASE64Decoder.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
